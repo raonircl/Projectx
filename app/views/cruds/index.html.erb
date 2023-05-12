@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cruds</h1>
+
+<div id="cruds">
+  <% @cruds.each do |crud| %>
+    <%= render crud %>
+    <p>
+      <%= link_to "Show this crud", crud %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New crud", new_crud_path %>
