@@ -1,2 +1,8 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Bem-vindo</h1>
+<p>Encontre seu cadastro:</p>
+
+<% @cruds.each do |crud| %>
+  <h2><%= link_to crud.name, crud %></h2>
+<% end %>
+
+<%= link_to "Posts", cruds_path %>
